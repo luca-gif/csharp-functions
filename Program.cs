@@ -18,20 +18,17 @@ void StampaArray(int[] array)
     Console.Write("]");
 }
 
-StampaArray(numbers);
-
 
 //FUNZIONE 2
 
 //int Quadrato(int numero): che vi restituisca il quadrato del numero passato come parametro.
 
-/*int Quadrato(int numero)
+int Quadrato(int numero)
 {
     return numero * numero;
     
 }
 
-Console.WriteLine(Quadrato(10));*/
 
 //FUNZIONE 3
 /* int[] ElevaArrayAlQuadrato(int[] array): che preso un array di numeri interi, restituisca un nuovo array con tutti gli elementi
@@ -39,7 +36,7 @@ elevati quadrato. Attenzione: è importante restituire un nuovo array, e non mod
 Vi ricordate perchè? Pensateci (vedi slide) */
 
 
-/*int[] ElevaArrayAlQuadrato(int[] array)
+int[] ElevaArrayAlQuadrato(int[] array)
 {
     int[] quadrato = new int[array.Length];
 
@@ -50,7 +47,8 @@ Vi ricordate perchè? Pensateci (vedi slide) */
         return quadrato;
 }
 
-StampaArray(ElevaArrayAlQuadrato(numbers));*/
+
+//FUNZIONE 4
 
 /* int sommaElementiArray(int[] array): che preso un array di numeri interi, 
  * restituisca la somma totale di tutti gli elementi dell’array. */
@@ -66,4 +64,25 @@ int sommaElementiArray(int[] array)
         return sum;
 }
 
-Console.WriteLine(sommaElementiArray(numbers));
+
+//FUNZIONE 5
+
+int[] arrNumbers = { 2, 6, 7, 5, 3, 9 };
+
+Console.WriteLine("Stampare l’array di numeri fornito a video");
+StampaArray(arrNumbers);
+
+
+Console.WriteLine("");
+Console.WriteLine("Stampare l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato.");
+StampaArray(ElevaArrayAlQuadrato(arrNumbers));
+
+
+Console.WriteLine("");
+Console.WriteLine("Stampare la somma di tutti i numeri");
+Console.WriteLine(sommaElementiArray(arrNumbers));
+
+
+Console.WriteLine("");
+Console.WriteLine("Stampare la somma di tutti i numeri elevati al quadrati.");
+Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(arrNumbers)));
