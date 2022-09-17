@@ -39,7 +39,7 @@ elevati quadrato. Attenzione: è importante restituire un nuovo array, e non mod
 Vi ricordate perchè? Pensateci (vedi slide) */
 
 
-int[] ElevaArrayAlQuadrato(int[] array)
+/*int[] ElevaArrayAlQuadrato(int[] array)
 {
     int[] quadrato = new int[array.Length];
 
@@ -50,4 +50,20 @@ int[] ElevaArrayAlQuadrato(int[] array)
         return quadrato;
 }
 
-StampaArray(ElevaArrayAlQuadrato(numbers));
+StampaArray(ElevaArrayAlQuadrato(numbers));*/
+
+/* int sommaElementiArray(int[] array): che preso un array di numeri interi, 
+ * restituisca la somma totale di tutti gli elementi dell’array. */
+
+int sommaElementiArray(int[] array)
+{
+    int sum = 0;
+    
+    for(int i=0; i<array.Length; i++)
+    {
+        sum += array[i];
+    }
+        return sum;
+}
+
+Console.WriteLine(sommaElementiArray(numbers));
